@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>${title}</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="Thu, 19 Nov 1900 08:52:00 GMT">
+    <link rel="shortcut icon" href="/admin/static/images/icons/favicon.ico">
+    <link rel="apple-touch-icon" href="/admin/static/images/icons/favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/admin/static/images/icons/favicon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/admin/static/images/icons/favicon-114x114.png">
+    <!--Loading bootstrap css-->
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/jquery-ui-1.10.4.custom/css/ui-lightness/jquery-ui-1.10.4.custom.min.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/font-awesome/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/bootstrap/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/bootstrap-datepicker/css/datepicker.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
+    <!--LOADING STYLESHEET FOR PAGE-->
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/lightbox/css/lightbox.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/DataTables/media/css/jquery.dataTables.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/DataTables/extensions/TableTools/css/dataTables.tableTools.min.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/DataTables/media/css/dataTables.bootstrap.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/summernote/summernote.css">
+    <!--Loading style vendors-->
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/animate.css/animate.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/iCheck/skins/all.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/jquery-notific8/jquery.notific8.min.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/bootstrap-daterangepicker/daterangepicker-bs3.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/fileupload/jasny-bootstrap.min.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/jquery-colorbox/colorbox.css">
+    <!--Loading style-->
+    <link type="text/css" rel="stylesheet" href="/admin/static/css/themes/style1/yellow-blue.css" class="default-style">
+    <link type="text/css" rel="stylesheet" href="/admin/static/css/themes/style1/yellow-blue.css" id="theme-change" class="style-change color-change">
+    <link type="text/css" rel="stylesheet" href="/admin/static/css/style-responsive.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/jquery-fancytree/skin-bootstrap/ui.fancytree.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/jplist/html/css/jplist-custom.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/css/webuploader.css">
+    <link type="text/css" rel="stylesheet" href="/admin/static/vendors/jquery-toastr/toastr.css">
+    <script src="/admin/static/js/jquery-1.10.2.min.js"></script>
+    <script src="/admin/static/css/webuploader.min.js"></script>
+    <script src="/admin/vendors/sockjs/sockjs.min.js"></script>
+</head>
+<body class="" style="overflow-x:hidden;">
+    <!--BEGIN BACK TO TOP-->
+    <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
+    <!--END BACK TO TOP-->
+    <!--BEGIN TOPBAR-->
+    <div id="header-topbar-option-demo" class="page-header-topbar">
+    	<nav id="topbar" role="navigation" style="margin-bottom: 0; z-index: 2;" class="navbar navbar-default navbar-static-top">
+    		<div class="navbar-header">
+    			<button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle">
+    				<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+    			</button>
+    			<a id="logo" href="/" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text"><img height="30px" src="/admin/static/images/logo.png"/></span><span style="display: none" class="logo-text-icon"><img width="30px" src="/admin/static/images/icons/favicon.png"/></span></a>
+    		</div>
+    		<div class="topbar-main">
+    			<a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+    			<ul class="nav navbar navbar-top-links navbar-right mbn">
+    				<li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
+    				<img src="/admin/static/files/user/128.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span class="hidden-xs">登录名</span>&nbsp;<span class="caret"></span></a>
+    					<ul class="dropdown-menu dropdown-user pull-right">
+                            <!-- 
+    						<li><a href="#"><i class="fa fa-picture-o"></i>修改头像</a></li>
+    						<li><a href="#"><i class="fa fa-user"></i>修改密码</a></li>
+    						<li class="divider"></li>
+                             -->
+    						<li><a href="/logout"><i class="fa fa-sign-out"></i>退出登录</a></li>
+    					</ul>
+    				</li>
+    			</ul>
+    		</div>
+    	</nav>
+    </div>
+	<div id="wrapper">
+		<!--BEGIN SIDEBAR MENU-->
+        <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+        <div class="sidebar-collapse menu-scroll">
+            <ul id="side-menu" class="nav">
+                <li class="user-panel">
+                    <div class="thumb">
+                        <img src="/admin/static/files/user/128.jpg" alt="" class="img-circle" />
+                    </div>
+                    <div class="info">
+                        <p>登录名</p>
+                        <ul class="list-inline list-unstyled">
+                            <!-- 
+                            <li><a href="#" data-hover="tooltip" title="修改头像"><i class="fa fa-picture-o"></i></a></li>
+                            -->
+                            <li><a href="/admin/module/rpassword" data-hover="tooltip" title="修改密码"><i class="fa fa-user"></i></a></li>
+                            <li><a href="/admin/module/logout" data-hover="tooltip" title="退出登录"><i class="fa fa-sign-out"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li><a href="/admin/module/service"><i class="fa fa-qrcode"></i><span class="menu-title">服务</span></a></li>
+                <li><a href="/admin/module/device"><i class="fa fa-tablet"></i><span class="menu-title">设备</span></a></li>
+                <li><a href="/admin/module/device/type"><i class="fa fa-desktop"></i><span class="menu-title">设备类型</span></a></li>
+                <li><a href="#"><i class="fa fa-group"></i><span class="menu-title">用户</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/module/user"><i class="fa fa-user"></i><span class="submenu-title">用户</span></a></li>
+                        <li><a href="/admin/module/role"><i class="fa fa-shield"></i><span class="submenu-title">角色</span></a></li>
+                        <li><a href="/admin/module/menu"><i class="fa fa-lock"></i><span class="submenu-title">菜单</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-cogs"></i><span class="menu-title">系统</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/module/airline"><i class="fa fa-plane"></i><span class="submenu-title">航线</span></a></li>
+                        <li><a href="/admin/module/city"><i class="fa fa-location-arrow"></i><span class="submenu-title">城市</span></a></li>
+                        <li><a href="/admin/module/template"><i class="fa fa-list-alt"></i><span class="submenu-title">模板</span></a></li>
+                        <li><a href="/admin/module/traffic"><i class="fa fa-truck"></i><span class="submenu-title">交通状况</span></a></li>
+                        <li><a href="#"><i class="fa fa-exclamation-triangle"></i><span class="submenu-title">超限及违禁品</span><span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li><a href="/admin/module/item/oversize"><i class="fa fa-angle-right"></i><span class="submenu-title">超限物品</span></a></li>
+                                <li><a href="/admin/module/item/prohibited"><i class="fa fa-angle-right"></i><span class="submenu-title">违禁品</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/admin/module/log"><i class="fa fa-th-list"></i><span class="menu-title">日志</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <script type="text/javascript">
+        var par = $("li[class='active']").parent();
+        if (par.hasClass("nav-second-level")) {
+            par.addClass("collapse in");
+            par.parent().addClass("active");
+        } else if (par.hasClass("nav-third-level")) {
+            par.addClass("collapse in");
+            par.parent().addClass("active");
+            par.parent().parent().addClass("collapse in");
+            par.parent().parent().parent().addClass("active");
+        } 
+    </script>
+	<!--END SIDEBAR MENU-->
+	<!--BEGIN PAGE WRAPPER-->
+	<div id="page-wrapper">
+		<!--BEGIN TITLE & BREADCRUMB PAGE-->
+		<div id="title-breadcrumb-option-demo" class="page-title-breadcrumb">
+			<div class="page-header pull-left">
+				<div class="page-title">${title}</div>
+			</div>
+			<ol class="breadcrumb page-breadcrumb">
+				<li><i class="fa fa-home"></i>&nbsp;<a href="/admin/dashboard">首页</a>&nbsp;&nbsp;<i class="fa fa-angle-right"></i>&nbsp;&nbsp;</li>
+				<li class="active"><a href="#">${title}</a></li>
+			</ol>
+			<div class="clearfix"></div>
+		</div>
+		<!--END TITLE & BREADCRUMB PAGE-->
+		<!--BEGIN CONTENT-->

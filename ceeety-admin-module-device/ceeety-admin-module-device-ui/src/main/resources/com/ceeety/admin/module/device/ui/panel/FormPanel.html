@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wicket:panel>
+    <div class="form-body pal">
+        <div class="form-group">
+            <label for="airportCode" class="col-md-2 control-label">设备所属机场<span class='require'>*</span></label>
+            <div class="col-md-10">
+                <div class="input-icon right">
+                    <input wicket:id="airportCode" type="text" placeholder="请输入机场三字码" class="required form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="deviceId" class="col-md-2 control-label">设备ID <span class='require'>*</span></label>
+            <div class="col-md-10">
+                <div class="input-icon right">
+                    <input wicket:id="deviceId" type="text" placeholder="请输入设备名称" class="required form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-md-2 control-label">设备名称 <span class='require'>*</span></label>
+            <div class="col-md-10">
+                <div class="input-icon right">
+                    <input wicket:id="name" type="text" placeholder="请输入设备名称" class="required form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="location" class="col-md-2 control-label">设备位置 <span class='require'>*</span></label>
+            <div class="col-md-10">
+                <div class="input-icon right">
+                    <input wicket:id="location" type="text" placeholder="请输入设备安装位置" class="required form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="code" class="col-md-2 control-label">设备硬件编码 <span class='require'>*</span></label>
+            <div class="col-md-10">
+                <div class="input-icon right">
+                    <input wicket:id="code" type="text" placeholder="请输入设备硬件唯一编码" class="required form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="secret" class="col-md-2 control-label">设备密锁<span class='require'>*</span></label>
+            <div class="col-md-10">
+                <div class="input-icon right">
+                    <input wicket:id="secret" type="text" placeholder="请输入设备密锁" class="required form-control">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="deviceType.id" class="col-md-2 control-label">类型 <span class='require'>*</span></label>
+            <div class="col-md-10">
+                <div class="input-icon right">
+                    <select wicket:id="deviceType.id" class="required form-control"></select>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="form-actions none-bg">
+        <div class="col-md-offset-5 col-md-10">
+            <button type="submit" class="btn btn-primary">确定</button>
+            &nbsp;
+            <a wicket:id="cancelLink" class="btn btn-default">取消</a>
+        </div>
+    </div>
+</wicket:panel>

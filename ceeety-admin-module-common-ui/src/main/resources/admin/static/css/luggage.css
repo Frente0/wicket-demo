@@ -1,0 +1,109 @@
+.editDiv{
+	/* border: 1px solid grey; */
+	margin-left: 8%;
+	min-height: 700px;
+	width:80%;
+}
+.titleName{
+	font-size: 22px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 5px;
+    width: 55%;
+    min-width: 700px;
+}
+.groupName{
+	font-size: 20px;
+    text-align: center;
+    vertical-align: middle;
+    margin-right: 80px;	
+}
+.groupDiv{
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+.cancelGroup{
+	height: 34px;
+    padding: 0px 0px; 
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.moveGroupBtnLeft{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+.moveGroupBtnRight{
+	height: 27px;
+    padding: 0px 0px; 
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.floatLeft{
+	float: left;
+}
+.MoveleftAndRight{
+	margin-top: 35px;
+	min-width: 160px;
+	text-align: center;
+}
+
+.moveSelect{
+	min-width: 260px;
+	min-height: 300px;
+}
+.member{
+	font-size: 16px;
+    line-height: 34px;
+}
+.moveBtn{
+	min-width: 82px;
+	height: 27px;
+    padding: 0px 0px; 
+    padding-left: 4px;
+    padding-right: 4px;
+}
+.chooseLeadDiv{
+	width: 100%;
+	margin-top: 15px;
+	height: 35px;
+}
+.selectLeader{
+	width: 20%;
+	float: left;
+}
+.chooseLeadDiv>span{
+	float: left;
+	line-height: 34px;
+	margin-right: 10px;
+}
+.buttomDiv{
+	width: 100%;
+	min-height: 100px;
+}
+.noteDiv{
+	margin-top: 25px;
+}
+.confirmDiv{
+	text-align: center;
+	margin-top: 20px;
+}
+.confirmBtn{
+	min-width: 82px;
+	height: 27px;
+    padding: 0px 0px; 
+    padding-left: 4px;
+    padding-right: 4px;
+    margin-right: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/model/DeviceType.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/model/DeviceLocation.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/service/DeviceService.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/service/DeviceTypeService.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/service/DeviceLocationService.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/model/Device.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/model/Group.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/service/RelationService.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/model/Relation.java
+/Users/zhangqiao/ceeety-admin-module/ceeety-admin-module-device/ceeety-admin-module-device-model/src/main/java/com/ceeety/admin/module/device/service/GroupService.java

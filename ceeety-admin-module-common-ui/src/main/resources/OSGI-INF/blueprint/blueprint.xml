@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Licensed to the Apache Software Foundation (ASF) under one or more contributor license agreements. See the NOTICE file 
+    distributed with this work for additional information regarding copyright ownership. The ASF licenses this file to You under 
+    the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may 
+    obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to 
+    in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF 
+    ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under 
+    the License. -->
+
+<!-- xmlns:ext="http://aries.apache.org/blueprint/xmlns/blueprint-ext/v1.0.0" -->
+
+<blueprint xmlns="http://www.osgi.org/xmlns/blueprint/v1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cm="http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0"
+	xsi:schemaLocation="http://www.osgi.org/xmlns/blueprint/v1.0.0
+           http://www.osgi.org/xmlns/blueprint/v1.0.0/blueprint.xsd
+           http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0
+           http://aries.apache.org/blueprint/xmlns/blueprint-cm/v1.1.0/blueprint-cm-1.0.0.xsd">
+           
+    <!-- 公用静态资源文件 -->
+    <bean id="adminResourceMapping" class="org.ops4j.pax.web.extender.whiteboard.runtime.DefaultResourceMapping">
+        <property name="alias" value="/admin/static" />
+        <property name="path" value="/admin/static" />
+    </bean>
+    <service id="resources" ref="adminResourceMapping" interface="org.ops4j.pax.web.service.whiteboard.ResourceMapping" />
+    
+    <!-- 登录使用 -->
+    <bean id="moduleContext" class="com.ceeety.admin.module.common.ui.ModuleContext"/>
+    <service id="moduleContextService" ref="moduleContext" interface="org.osgi.service.http.HttpContext">
+        <service-properties>
+            <entry key="httpContext.id" value="com.ceeety.admin.module"/>
+        </service-properties>
+    </service>
+    
+    <!-- 异常页面 -->
+    <service interface="javax.servlet.Servlet">
+        <service-properties>
+            <entry key="alias" value="/admin/exception"/>
+        </service-properties>   
+        <bean class="com.ceeety.admin.module.common.ui.ModuleExceptionServlet"/>
+    </service>
+    <service interface="org.ops4j.pax.web.service.whiteboard.ErrorPageMapping">
+        <bean class="org.ops4j.pax.web.extender.whiteboard.runtime.DefaultErrorPageMapping">
+            <property name="error" value="java.lang.Exception"/>
+            <property name="location" value="/admin/static/uncaughtException.html"/>
+        </bean>
+    </service>
+    
+    <!-- 欢迎页面 -->
+    <bean id="welcomeFile" class="org.ops4j.pax.web.extender.whiteboard.runtime.DefaultWelcomeFileMapping">
+        <property name="redirect" value="true" />
+        <property name="welcomeFiles">
+            <array>
+                <value>/admin/static/index.html</value>
+                <value>/admin/static/welcome.html</value>
+            </array>
+        </property>
+    </bean>
+    <service id="welcomeFileService" ref="welcomeFile" interface="org.ops4j.pax.web.service.whiteboard.WelcomeFileMapping" />
+
+    <!-- 404页面 -->
+    <service id="errorPageMapping" interface="org.ops4j.pax.web.service.whiteboard.ErrorPageMapping">
+        <bean class="org.ops4j.pax.web.extender.whiteboard.runtime.DefaultErrorPageMapping">
+            <property name="error" value="404" />
+            <property name="location" value="/admin/static/404.html"/>
+        </bean> 
+    </service>
+    
+    <!-- 获取布局模板服务 -->
+    <bean id="layoutService" class="com.ceeety.admin.module.common.ui.impl.LayoutServiceImpl" init-method="init" />
+    <service ref="layoutService" interface="com.ceeety.admin.module.common.ui.LayoutService">
+        <service-properties>
+            <entry key="osgi.ceeety.admin.module.service.name" value="com/ceeety/admin/module/layout" />
+        </service-properties>
+    </service>
+</blueprint>

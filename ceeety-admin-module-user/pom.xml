@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.ceeety.admin</groupId>
+        <artifactId>ceeety-admin-module</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+    <artifactId>ceeety-admin-module-user</artifactId>
+    <packaging>pom</packaging>
+    <name>此时此地-管理平台-业务模块-用户管理</name>
+    <modules>
+        <module>ceeety-admin-module-user-model</module>
+        <module>ceeety-admin-module-user-persistence</module>
+        <module>ceeety-admin-module-user-service-rest</module>
+        <module>ceeety-admin-module-user-ui</module>
+    </modules>
+    <description>此时此地-管理平台-业务模块-用户管理</description>
+</project>

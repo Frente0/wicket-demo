@@ -1,0 +1,76 @@
+<div class="page-content">
+	<div class="row">
+		<div class="col-lg-12">
+			<div class="portlet box">
+				<div class="portlet-header">
+					<div class="caption">系统用户</div>
+					<div class="actions">
+						<a href="/admin/module/user/add" class="btn btn-warning btn-xs"><i class="fa fa-plus"></i>&nbsp;新建</a>&nbsp;
+					</div>
+				</div>
+				<div class="portlet-body">
+					<div class="row mbm">
+						<div class="col-lg-12">
+							<div class="table-responsive">
+								<table id="userlist" class="table table-hover table-striped table-bordered table-advanced tablesorter display">
+									<thead>
+										<tr>
+											<th>用户名</th>
+											<th>操作</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#userlist').DataTable( {
+            "ajax": "/admin/module/user",
+            "processing": true,
+            "serverSide": true,
+            "searching": true,
+            "info": true,
+            "pagingType": "full_numbers",
+            "language": {
+                "sProcessing": "处理中...",
+                "sLengthMenu": "显示 _MENU_ 项结果",
+                "sZeroRecords": "没有匹配结果",
+                "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+                "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+                "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+                "sInfoPostFix": "",
+                "sSearch": "搜索:",
+                "sUrl": "",
+                "sEmptyTable": "表中数据为空",
+                "sLoadingRecords": "载入中...",
+                "sInfoThousands": ",",
+                "oPaginate": {
+                    "sFirst": "首页",
+                    "sPrevious": "上页",
+                    "sNext": "下页",
+                    "sLast": "末页"
+                },
+                "oAria": {
+                    "sSortAscending": ": 以升序排列此列",
+                    "sSortDescending": ": 以降序排列此列"
+                }
+            },
+            "columns": [
+                {"data": "username"},
+                {
+                    "data": "id",
+                    "render": function ( data, type, full, meta ) {
+                        return '<a href="/admin/module/user/edit/' + data + '" class="btn btn-default btn-xs"><i class="fa fa-edit"></i>&nbsp;修改</a>' 
+                    		+ '<a href="javascript:void(0);" data-url="/admin/module/user/delete/' + data + '" class="btn btn-danger btn-xs myAConfirm"><i class="fa fa-edit"></i>&nbsp;删除</a>';
+                  	}
+                }
+            ],
+        });
+    });
+</script>

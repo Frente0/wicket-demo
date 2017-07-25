@@ -1,0 +1,73 @@
+* {
+	font-family: "Classic Grotesque W01", "Avenir Next", "Segoe UI", "Helvetica Neue", Arial, "Hiragino Sans GB", "PingFang SC", "Heiti SC", "Microsoft YaHei UI", "Microsoft YaHei", "Source Han Sans",
+		sans-serif;
+}
+
+.container {
+	padding: 0;
+	width: 100%;
+}
+
+/*login*/
+.logo img {
+	width: 200px;
+	padding: 15px;
+}
+
+.panel {
+	background-color: inherit;
+	border: 0;
+	border-radius: 0px;
+	box-shadow: 0;
+	margin-bottom: 10px;
+}
+
+.panel-heading {
+	border: 0;
+	border-radius: 0;
+	font-size: 28px;
+	padding: 10px 15px;
+}
+
+.panel-body {
+	border: 0;
+	border-radius: 0;
+	font-size: 15px;
+	padding: 5px 15px;
+}
+
+.panel-body p {
+	color: #ffffff;
+	padding: 5px 0;
+}
+
+.btn {
+	background-color: #ffc600;
+	border-color: #ffc600;
+	color: #211551;
+	border-radius: 0;
+}
+
+.login {
+	background-color: #211551;
+	color: #ffc600;
+	overflow-x:hidden;
+	overflow-y:auto;
+}
+
+.login .login-content {
+	color: #999;
+	margin: 0 auto;
+	padding: 15px 15px;
+}
+
+.footer {
+	line-height: 20px;
+	margin: 0 25px 0 15px;
+	padding: 10px 0;
+}
+
+.footer a {
+	color: #ffc600;
+	text-decoration: underline;
+}

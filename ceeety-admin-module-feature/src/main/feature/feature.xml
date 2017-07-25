@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<features name="${project.artifactId}-${project.version}" xmlns="http://karaf.apache.org/xmlns/features/v1.0.0">
+    
+    <repository>mvn:com.ceeety.admin/ceeety-admin-dao-feature/${project.version}/xml/features</repository>
+    <repository>mvn:org.apache.cxf.karaf/apache-cxf/${cxf.version}/xml/features</repository>
+	
+    <feature name="ceeety-admin-module-common-ui" description="此时此地-管理平台-业务模块-Common-UI Bundle" version="${pom.version}">
+        <feature>http</feature>
+        <feature>wicket</feature>
+        <feature>pax-wicket</feature>
+        <feature>blueprint-web</feature>
+        <feature>http-whiteboard</feature>
+        <bundle>mvn:commons-collections/commons-collections/3.2.2</bundle>
+        <bundle>mvn:commons-lang/commons-lang/2.6</bundle>
+        <bundle>mvn:org.apache.velocity/velocity/${velocity.version}</bundle>
+        <bundle>mvn:com.google.code.gson/gson/${gson.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-module-common-ui/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="wicket" version="${project.version}" description="Apache Wicket相关模块">
+        <bundle>mvn:org.apache.wicket/wicket-util/${wicket.version}</bundle>
+        <bundle>mvn:org.apache.wicket/wicket-request/${wicket.version}</bundle>
+        <bundle>mvn:org.apache.wicket/wicket-core/${wicket.version}</bundle>
+        <bundle>mvn:org.apache.wicket/wicket-auth-roles/${wicket.version}</bundle>
+        <bundle>mvn:org.apache.wicket/wicket-extensions/${wicket.version}</bundle>
+        <bundle>mvn:org.apache.wicket/wicket-velocity/${wicket.version}</bundle>
+    </feature>
+    
+    <feature name="pax-wicket" version="${project.version}" description="Pax-Wicket相关模块">
+        <feature>wicket</feature>
+        <feature>scr</feature>
+        <feature>eventadmin</feature>
+        <bundle>mvn:commons-io/commons-io/2.5</bundle>
+        <bundle>mvn:org.ops4j.base/ops4j-base/1.5.0</bundle>
+        <bundle>mvn:commons-fileupload/commons-fileupload/1.3.1</bundle>
+        <bundle>mvn:org.apache.geronimo.specs/geronimo-atinject_1.0_spec/1.0</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.aopalliance/1.0_6</bundle>
+        <bundle>mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.cglib/2.2.2_1</bundle>
+        <bundle>mvn:org.ops4j.pax.wicket/org.ops4j.pax.wicket.service/4.0.0</bundle>
+    </feature>
+    
+    <feature name='ceeety-admin-module-user' description='此时此地-管理平台-业务模块-用户管理' version='${project.version}'>
+        <details>${project.description}</details>
+        <feature>ceeety-admin-module-user-persistence</feature>
+        <feature>ceeety-admin-module-user-service-rest</feature>
+        <feature>ceeety-admin-module-user-ui</feature>
+    </feature>
+    
+    <feature name="ceeety-admin-module-user-persistence" description="此时此地-管理平台-业务模块-用户管理-Service服务" version="${pom.version}">
+        <feature>ceeety-admin-dao-base</feature>
+        <bundle>mvn:com.ceeety.common/ceeety-common-service/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-module-user-model/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-module-user-persistence/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="ceeety-admin-module-user-ui" description="此时此地-管理平台-业务模块-用户管理-UI界面" version="${pom.version}">
+        <feature>ceeety-admin-module-common-ui</feature>
+        <feature>ceeety-admin-module-user-persistence</feature>
+        <bundle>mvn:${groupId}/ceeety-admin-module-user-ui/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="ceeety-admin-module-user-service-rest" description="此时此地-管理平台-业务模块-用户管理-Rest接口" version="${pom.version}">
+        <feature>cxf-jaxrs</feature>
+        <feature>ceeety-admin-module-user-persistence</feature>
+        <bundle>mvn:${groupId}/ceeety-admin-module-user-service-rest/${pom.version}</bundle>
+    </feature>
+    
+    <feature name='ceeety-admin-module-device' description='此时此地-管理平台-业务模块-设备管理' version='${project.version}'>
+        <details>${project.description}</details>
+        <feature>ceeety-admin-module-device-persistence</feature>
+        <feature>ceeety-admin-module-device-service-rest</feature>
+        <feature>ceeety-admin-module-device-ui</feature>
+    </feature>
+    
+    <feature name='ceeety-admin-airport' description='此时此地-管理平台-业务模块-设备管理-test' version='${project.version}'>
+        <details>${project.description}</details>
+        <feature>ceeety-admin-airport-device-persistence</feature>
+        <feature>ceeety-admin-airport-device-ui</feature>
+    </feature>
+    
+    <feature name="ceeety-admin-airport-device-model" description="此时此地-管理平台-业务模块-设备管理-Service服务-test" version="${pom.version}">
+        <feature>ceeety-admin-dao-base</feature>
+        <bundle>mvn:com.ceeety.common/ceeety-common-service/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-airport-device-model/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-airport-device-persistence/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="ceeety-admin-module-device-persistence" description="此时此地-管理平台-业务模块-设备管理-Service服务" version="${pom.version}">
+        <feature>ceeety-admin-dao-base</feature>
+        <bundle>mvn:com.ceeety.common/ceeety-common-service/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-module-device-model/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-module-device-persistence/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="ceeety-admin-airport-device-persistence" description="此时此地-管理平台-业务模块-设备管理-Service服务" version="${pom.version}">
+        <feature>ceeety-admin-dao-base</feature>
+        <bundle>mvn:com.ceeety.common/ceeety-common-service/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-airport-device-model/${pom.version}</bundle>
+        <bundle>mvn:${groupId}/ceeety-admin-airport-device-persistence/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="ceeety-admin-module-device-ui" description="此时此地-管理平台-业务模块-设备管理-UI界面-test" version="${pom.version}">
+        <feature>pax-wicket</feature>
+        <feature>ceeety-admin-airport-device-ui</feature>
+        <feature>ceeety-admin-airport-device-persistence</feature>
+        <bundle>mvn:${groupId}/ceeety-admin-airport-device-ui/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="ceeety-admin-module-device-ui" description="此时此地-管理平台-业务模块-设备管理-UI界面" version="${pom.version}">
+        <feature>pax-wicket</feature>
+        <feature>ceeety-admin-module-common-ui</feature>
+        <feature>ceeety-admin-module-device-persistence</feature>
+        <bundle>mvn:${groupId}/ceeety-admin-module-device-ui/${pom.version}</bundle>
+    </feature>
+    
+    <feature name="ceeety-admin-module-device-service-rest" description="此时此地-管理平台-业务模块-设备管理-Rest接口" version="${pom.version}">
+        <feature>cxf-jaxrs</feature>
+        <feature>ceeety-admin-module-device-persistence</feature>
+        <bundle>mvn:${groupId}/ceeety-admin-module-device-service-rest/${pom.version}</bundle>
+    </feature>
+    
+</features>

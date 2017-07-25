@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wicket:panel>
+    <!--BEGIN BACK TO TOP-->
+    <a id="totop" href="#"><i class="fa fa-angle-up"></i></a>
+    <!--END BACK TO TOP-->
+    <!--BEGIN TOPBAR-->
+    <div id="header-topbar-option-demo" class="page-header-topbar">
+        <nav id="topbar" role="navigation" style="margin-bottom: 0; z-index: 2;" class="navbar navbar-default navbar-static-top">
+            <div class="navbar-header">
+                <button type="button" data-toggle="collapse" data-target=".sidebar-collapse" class="navbar-toggle">
+                    <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+                </button>
+                <a id="logo" href="/" class="navbar-brand"><span class="fa fa-rocket"></span><span class="logo-text"><img height="30px" src="/admin/static/images/logo.png"/></span><span style="display: none" class="logo-text-icon"><img width="30px" src="/admin/static/images/icons/favicon.png"/></span></a>
+            </div>
+            <div class="topbar-main">
+                <a id="menu-toggle" href="#" class="hidden-xs"><i class="fa fa-bars"></i></a>
+                <ul class="nav navbar navbar-top-links navbar-right mbn">
+                    <li class="dropdown topbar-user"><a data-hover="dropdown" href="#" class="dropdown-toggle">
+                    <img src="/admin/static/files/user/128.jpg" alt="" class="img-responsive img-circle" />&nbsp;<span wicket:id="loginName" class="hidden-xs">登录名</span>&nbsp;<span class="caret"></span></a>
+                        <ul class="dropdown-menu dropdown-user pull-right">
+                            <!-- 
+                            <li><a href="#"><i class="fa fa-picture-o"></i>修改头像</a></li>
+                            <li><a href="#"><i class="fa fa-user"></i>修改密码</a></li>
+                            <li class="divider"></li>
+                             -->
+                            <li><a href="/logout"><i class="fa fa-sign-out"></i>退出登录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</wicket:panel>

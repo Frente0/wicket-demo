@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wicket:panel>
+    <!--BEGIN SIDEBAR MENU-->
+    <nav id="sidebar" role="navigation" class="navbar-default navbar-static-side">
+        <div class="sidebar-collapse menu-scroll">
+            <ul id="side-menu" class="nav">
+                <li class="user-panel">
+                    <div class="thumb">
+                        <img src="/admin/static/files/user/128.jpg" alt="" class="img-circle" />
+                    </div>
+                    <div class="info">
+                        <p wicket:id="loginName">登录名</p>
+                        <ul class="list-inline list-unstyled">
+                            <!-- 
+                            <li><a href="#" data-hover="tooltip" title="修改头像"><i class="fa fa-picture-o"></i></a></li>
+                            -->
+                            <li><a href="/admin/module/rpassword" data-hover="tooltip" title="修改密码"><i class="fa fa-user"></i></a></li>
+                            <li><a href="/admin/module/logout" data-hover="tooltip" title="退出登录"><i class="fa fa-sign-out"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </li>
+                <li><a href="/admin/module/service"><i class="fa fa-qrcode"></i><span class="menu-title">服务</span></a></li>
+                <li><a href="/admin/module/device"><i class="fa fa-tablet"></i><span class="menu-title">设备</span></a></li>
+                <li><a href="/admin/module/device/type"><i class="fa fa-desktop"></i><span class="menu-title">设备类型</span></a></li>
+                <li><a href="#"><i class="fa fa-group"></i><span class="menu-title">用户</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/module/user"><i class="fa fa-user"></i><span class="submenu-title">用户</span></a></li>
+                        <li><a href="/admin/module/role"><i class="fa fa-shield"></i><span class="submenu-title">角色</span></a></li>
+                        <li><a href="/admin/module/menu"><i class="fa fa-lock"></i><span class="submenu-title">菜单</span></a></li>
+                    </ul>
+                </li>
+                <li><a href="#"><i class="fa fa-cogs"></i><span class="menu-title">系统</span><span class="fa arrow"></span></a>
+                    <ul class="nav nav-second-level">
+                        <li><a href="/admin/module/airline"><i class="fa fa-plane"></i><span class="submenu-title">航线</span></a></li>
+                        <li><a href="/admin/module/city"><i class="fa fa-location-arrow"></i><span class="submenu-title">城市</span></a></li>
+                        <li><a href="/admin/module/template"><i class="fa fa-list-alt"></i><span class="submenu-title">模板</span></a></li>
+                        <li><a href="/admin/module/traffic"><i class="fa fa-truck"></i><span class="submenu-title">交通状况</span></a></li>
+                        <li><a href="#"><i class="fa fa-exclamation-triangle"></i><span class="submenu-title">超限及违禁品</span><span class="fa arrow"></span></a>
+                            <ul class="nav nav-third-level">
+                                <li><a href="/admin/module/item/oversize"><i class="fa fa-angle-right"></i><span class="submenu-title">超限物品</span></a></li>
+                                <li><a href="/admin/module/item/prohibited"><i class="fa fa-angle-right"></i><span class="submenu-title">违禁品</span></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="/admin/module/log"><i class="fa fa-th-list"></i><span class="menu-title">日志</span></a></li>
+            </ul>
+        </div>
+    </nav>
+    <!--END SIDEBAR MENU-->
+    <script type="text/javascript">
+        var par = $("li[class='active']").parent();
+        if (par.hasClass("nav-second-level")) {
+            par.addClass("collapse in");
+            par.parent().addClass("active");
+        } else if (par.hasClass("nav-third-level")) {
+            par.addClass("collapse in");
+            par.parent().addClass("active");
+            par.parent().parent().addClass("collapse in");
+            par.parent().parent().parent().addClass("active");
+        } 
+    </script>
+</wicket:panel>
